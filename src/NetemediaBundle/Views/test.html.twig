@@ -1,0 +1,167 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- MODAL -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mais encore....</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            JQuery, Bootstrap, Mapbox, ....
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL -->
+    
+    <div class="mod-singular js-singular" style="top:-32px;">
+
+        <div id="sec01" class="mod-singular-section">
+
+            <div class="row paddingtop50">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <span class="title-font white-color"><small>Exemple</small><br />des plugins utilisés</span>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h2 class='subtitle-font'>Singular</h2><i class="fas fa-link"></i> <a target="_blank" href="https://www.jqueryscript.net/layout/Create-A-Single-Page-Scrolling-Website-with-jQuery-CSS3-singular-js.html" >Lien</a>
+                            <p class="justify text-font">
+                                <br />
+                                Le plugin <strong>singular</strong> est utilisé pour diviser une seule page Web 
+                                en plusieurs sections afin que vous puissiez faire défiler ces sections page par page 
+                                à l'aide de la molette de la souris (<strong>mousewheel</strong>) ou de la navigation 
+                                par points / flèches. Le plugin <strong>easing</strong> est utilisé pour les effets de transistions.
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                    Et plus encore ?
+                                </button>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="sec02" class="mod-singular-section">
+            <div class="row paddingtop50">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <span class="title-font white-color"><small>Exemple d'utilisation</small><br />d'alignement Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="container" style="overflow:hidden;">
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h2 class='subtitle-font'>Title 1</h2>
+                            <p class="justify text-font">
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.                                         
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h2 class='subtitle-font'>Title 2</h2>
+                            <p class="justify text-font">
+                                Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p class="justify text-font">
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.                                        
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="sec03" class="mod-singular-section">
+
+            <div class="row paddingtop50">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <span class="title-font white-color"><small>Exemple d'utilisation</small><br />de Mapboxgl API</span>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="map"></div>
+            </div>
+
+        </div>
+
+        <div id="sec04" class="mod-singular-section">
+            <div class="row paddingtop50">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <span class="title-font white-color"><small>Mon intérêt pour</small><br />Netemedia</span>
+                </div>
+
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div id="barometer"></div>
+                </div>
+            </div>
+        </div>    
+
+    </div>
+
+    <!-- Navigation side (right) menu -->
+    <div class="mod-nav">
+        <ul class="mod-nav-list js-singular-nav">
+            <li class="mod-nav-item"><a href="#sec01"> Section 1 </a></li>
+            <li class="mod-nav-item"><a href="#sec02"> Section 2 </a></li>
+            <li class="mod-nav-item"><a href="#sec03"> Section 3 </a></li>
+            <li class="mod-nav-item"><a href="#sec04"> Section 4 </a></li>
+        </ul>
+    </div>
+
+    <link rel="stylesheet" href="{{ asset('css/singular.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/scrollbar.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/barometer.css') }}"/>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' /> 
+    
+    {% block stylesheets %}
+        {{ parent() }}
+
+        <style>
+            #map {
+                width:750px; height:550px; margin:0 auto;
+            }
+        </style>
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery.singular.js') }}" ></script>
+        <script src="{{ asset('js/jquery.easing.js') }}" ></script>
+        <script src="{{ asset('js/jquery.mousewheel.min.js') }}" ></script>
+        <script src="{{ asset('js/barometer.js') }}" ></script>
+
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+
+        <script type="text/javascript">
+            {{ include('@NetemediaBlocks/test.js.twig') }}
+        </script>
+
+    {% endblock %}    
+    
+{% endblock %}
+
+

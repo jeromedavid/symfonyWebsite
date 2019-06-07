@@ -1,0 +1,258 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        
+    <div class="row paddingtop50" style="background-color:#008390;">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <span class="title-font white-color"><small>Page d'exemple</small><br />de réplication</span>
+            <p>
+                J'ai fait en sorte de créer mon propre code et de m'adapter au plus proche d'après la page d'origine.
+                <br />
+                <i>.... pour la perfection, question de temps ;)</i>
+            </p>
+        </div>
+    </div>
+    <section style="width:100%">
+        
+        <div class="BGHead">
+            <div id="mainTitlePosition" class="containerSection col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="introduction_title_h1">
+                    <strong>
+                        Notre équipe de<br />passionnés...
+                    </strong>
+                </h1>
+                <div class="redBand"></div>
+                <h2 class="introduction_title_h2">
+                    ... donne vie à vos rêves numériques
+                </h2>
+            </div>
+        </div>
+        
+
+    </section>
+    <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class='containerSection'>   
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            
+            <h1 class="titre">Bienvenue chez nous</h1>
+            
+            <p class="subTitle">Netemedia c'est...</p>
+        </div>
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <div class="margin10 center text-center">
+                        <div class="picto">
+                            <img src="https://www.netemedia.fr/wp-content/uploads/2018/04/equipe-boss.png" />
+                        </div>
+                        <p class="text">
+                            1 big boss
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <div class="margin10 center text-center">
+                        <div class="picto">
+                            <img src="https://www.netemedia.fr/wp-content/uploads/2018/04/equipe-chefProjet.png" />
+                        </div>
+                        <p class="text">
+                            2 chefs de projets
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <div class="margin10 center text-center">
+                        <div class="picto">
+                            <img src="https://www.netemedia.fr/wp-content/uploads/2018/04/equipe-dev.png" />
+                        </div>
+                        <p class="text">
+                            2 développeurs
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <div class="margin10 center text-center">
+                        <div class="picto">
+                            <img src="https://www.netemedia.fr/wp-content/uploads/2018/04/equipe-graphiste.png" />
+                        </div>
+                        <p class="text">
+                            3 graphistes<br />freelance
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <div class="margin10 center text-center">
+                        <div class="picto">
+                            <img src="https://www.netemedia.fr/wp-content/uploads/2018/04/equipe-dev-free.png" />
+                        </div>
+                        <p class="text">
+                            4 développeurs<br />freelance
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                    <div class="margin10 center text-center">
+                        <div class="picto">
+                            <img src="https://www.netemedia.fr/wp-content/uploads/2018/04/equipe-redac.png" />
+                        </div>
+                        <p class="text">
+                            2 rédactrices web,<br />1 référenceur...
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <button id="buttonRed">Découvrez notre agence web</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin50 BGDarkBlue">
+        <div class='containerSection'>
+            
+            
+        </div>
+    </section>
+    {% block stylesheets %}
+        {{ parent() }}
+        <style>
+            
+            .BGHead {
+                background-image:url('https://www.netemedia.fr/wp-content/uploads/2018/03/equipe-1.png'); 
+                background-size: cover; 
+                background-repeat: no-repeat;
+                height:500px;
+            }
+            
+            #mainTitlePosition {
+                padding-top:200px;
+            }
+            
+            .redBand {
+                border-top: 6px solid #e41454; 
+                margin-top:15px; 
+                width:500px;
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+            
+            h1.introduction_title_h1 {
+                font-weight: 400;
+                font-size: 3.2rem;
+                color:white;
+                font-weight: 500;
+            }
+            
+            h2.introduction_title_h2 {
+                font-weight: 400;
+                font-size: 1.2rem;
+                color:white;
+                font-weight: 500;
+            }
+            
+            #cssmenufront { z-index:999999999 }
+            
+            body {
+                font-family: 'Poppins', sans-serif;
+                width:100%;
+            }
+
+            .BGDarkBlue {
+                background-color: #008390;
+            }
+            
+            #buttonRed {
+                background-color:#E41454; 
+                color:white; 
+                border:1px solid #d3174f; 
+                border-radius: 5px;
+                padding: 5px;
+                text-align:center;
+                margin-bottom:20px;
+                margin-top:40px;
+                
+            }
+            
+            section {
+                
+            }
+            
+            section .containerSection {
+                width:70% !important; margin:0 auto;
+            }
+            
+            .center {
+                margin: 0 auto;
+            }
+            
+            .margin10 {
+                padding: 10px;
+            }
+            
+            .picto {
+                text-align: center; 
+                height:125px;
+            }
+            
+            .picto .img {
+
+                width: 125px;
+                height: 125px;
+                line-height: 125px;
+
+            }
+            
+            h1.titre {
+                border-bottom: 8px solid #c5dee1;
+                color: #102a39;
+                font-size: 4.6rem;
+                font-weight: 700;
+                line-height: 1.2;
+                display: inline-block;
+                padding-bottom: 10px;
+                padding-top: 50px;
+            }
+            
+            p.subTitle {
+                text-align: center;
+                padding-bottom: 40px;
+                padding-top: 20px;
+                color: #102a39;
+                
+            }
+            
+            .center p.text {
+                margin: 15px 0 0;
+                max-width: 165px;
+                color: #008390;
+                font-size: 1.1em;
+                display:block;
+                margin: 0 auto;
+                vertical-align: baseline;
+            }            
+            
+            .paddingBottom20 {
+                padding-bottom:20px;
+            }
+            
+        </style>
+    {% endblock %}
+
+    {% block javascripts %}
+
+        <script type="text/javascript">
+
+        </script>
+
+    {% endblock %}
+                    
+{% endblock %}
+

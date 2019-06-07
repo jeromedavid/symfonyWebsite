@@ -1,0 +1,55 @@
+//<script>
+    
+$(document).ready(function() {
+
+    function singularPage() {
+        $('.js-singular').singular({
+            section: '.mod-singular-section',
+            nav: '.js-singular-nav',
+            prev: '.js-singular-prev',
+            next: '.js-singular-next',
+            navActiveClass: 'js-singular-active',
+            scrollSpeed: 1000, 
+            mousewheel: true, // required jQuery mousewheel plugin
+            easing: 'easeInOutQuart', // requires jQuery easing plugin
+            scrollEnd: function(elem) { // callback
+            
+            }
+        });
+
+    }
+
+    singularPage();
+
+    // fix position plugin singular with top menu
+    $(".mod-singular").css("top", "-32px");
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiamVyb21lZGF2aWQiLCJhIjoiY2p1bnI0eXJ0MmxpYTRlcGdpaXEwejJiaCJ9.r5Mh1UHfZAV-6Hud6u4tPQ';
+    
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [2.3541888,48.870843],
+        zoom: 13
+    });
+
+    var popup = new mapboxgl.Popup({closeOnClick: false})
+                            .setLngLat([2.3541888,48.870843])
+                            .setHTML('<img src="https://www.netemedia.fr/wp-content/uploads/2018/04/logo_netemedia.png"  style="width:40px; height:40px;"/>')
+                            .addTo(map);
+
+    // Add zoom and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
+
+    $('#barometer').barometer({
+      placeholder: "degrees: ",
+      startvalue: "225"
+    });
+
+    // correction (sauvage) bug d'affichage du plugin
+    $('.barometer_container:nth-child(2)').destroy();
+    $('#barometer_form:nth-child(2)').destroy();
+    
+                  
+                  
+});
