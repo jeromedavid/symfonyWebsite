@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    
+    function validate_form(stop) {
+
+        $("#firstName").val($.trim($("#firstName").val()));
+        $("#lastName").val($.trim($("#lastName").val()));
+
+        stop = "Merci de remplir :";
+
+        if ( $("#firstName").val() == "" ) {
+            stop = stop + "<br />Le prénom";
+        }
+
+        if ( $("#lastName").val() == "" ) {
+            stop = stop + "<br />Le nom";
+        }
+
+        return stop;
+    }
+
+    $("#sendForm").click(function(e){
+
+        $("#errorMsg").hide();
+
+        var errors = '';
+
+        errors = validate_form(errors);
+
+        if (errors != "Merci de remplir :") {
+
+            $("#errorMsg").html(errors);
+            e.stopPropagation();
+            $("#errorMsg").show();               
+
+        }
+
+    });
+        
+</script>

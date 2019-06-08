@@ -38,6 +38,7 @@ twig:
     paths:
         '%kernel.project_dir%/src/NetemediaBundle/Blocks': NetemediaBlocks
         '%kernel.project_dir%/src/NetemediaBundle/Views': NetemediaViews
+        '%kernel.project_dir%/web/images': Images
 # Doctrine Configuration
 doctrine:
     dbal:

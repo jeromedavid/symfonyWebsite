@@ -1,0 +1,55 @@
+<script type="text/javascript">
+
+    function showWhatIsInsideRow(firstName, lastName, city, country, special, imgAvatar) {
+
+        $('#firstName').html(firstName);
+        $('#lastName').html(lastName);
+        $('#city').html(city);
+        $('#country').html(country);
+        $('#special').html(special);
+        $('#imgAvatar').attr('src', imgAvatar);
+
+        $('#cardBox').show();
+    }
+
+    $(document).ready(function() {
+
+        $('#cardBox').hide();
+
+        var tableUser = $('#tableUser').DataTable({
+            "columnDefs": [
+                {
+                    "targets": [ 5 ],
+                    "visible": false
+                }
+            ]
+        });
+
+        //Ajoute au tableau des noms ... connus ! >.<
+        tableUser.row.add( [
+                'Luke',
+                'Skywalker',
+                '???',
+                'Tatooine',
+                'Padawan',
+                'https://fr.seaicons.com/wp-content/uploads/2015/07/Luke-Skywalker-02-icon.png'
+            ],
+            ).draw( false );
+            
+        // Select the first table row if table got any data
+        if (  tableUser.data().any() ) {
+            $('#tableUser tbody tr:eq(0)').click();
+        }
+
+        // Refresh map according to data row selected (click)
+        $('#tableUser tbody').on('click', 'tr', function () {
+
+            var dataRow = tableUser.row( this ).data();
+            //alert( 'You clicked on '+dataRow[0]+'\'s row' );
+
+            showWhatIsInsideRow(dataRow[0],dataRow[1],dataRow[2],dataRow[3],dataRow[4],dataRow[5]);
+
+        });
+
+    });
+</script>

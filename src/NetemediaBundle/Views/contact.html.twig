@@ -1,13 +1,10 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Formulaire de contact{% endblock %}
+
+{#******** BLOCK BODY *******#}
 {% block body %}
-    
-    <style>
-        body {
-                background-color:#3DB680;
-            }
-    </style>
-    
+        
     <div id="wrapper">
         <div id="container">
             
@@ -19,7 +16,7 @@
                 </div>
             </div>
             <div id="errorMsg" class="alert alert-danger" role="alert" style="display:none;">
-              
+
             </div>
             <form action="{{ path('contactResult') }}" method="post" class="paddingtop50">
                 <div class="row">
@@ -52,49 +49,20 @@
             
         </div>
     </div>
-                    
- 
-    <script>
-
-        function validate_form(stop) {
-                   
-            $("#firstName").val($.trim($("#firstName").val()));
-            $("#lastName").val($.trim($("#lastName").val()));
-            
-            if ( $("#firstName").val() == "" ) {
-                stop = "Merci de remplir :<br />Le prénom";
-            }
-            
-            if ( $("#lastName").val() == "" ) {
-                stop = stop + "<br />Le nom";
-            }
-            
-            return stop;
-        }
-        
-        $("#sendForm").click(function(e){
-        
-            $("#errorMsg").hide();
-            
-            var errors = '';
-            
-            errors = validate_form(errors);
-            
-            if (errors != "") {
-            
-                $("#errorMsg").html(errors);
-                e.stopPropagation();
-                $("#errorMsg").show();               
-            
-            }
-
-        });
-        
-    </script>
+    
+    {#******** BLOCK JAVASCRIPT *******#}
+    {% block javascripts %}
+        {{ parent() }}
+        {{ include('@NetemediaBlocks/contact.js.twig') }}
+    {% endblock %}
+    {#******** END BLOCK JAVASCRIPT *******#}
+    
+    {#******** CSS BLOCK *******#} 
     {% block stylesheets %}
-    {{ parent() }}
-
-    {% endblock %} 
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('css/contact.css') }}"/>
+    {% endblock %}
+    {#******** END CSS BLOCK *******#}
+    
 {% endblock %}
-
-
+{#******** END BLOCK BODY *******#}

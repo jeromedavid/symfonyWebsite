@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Intégration de plugin{% endblock %}
+
+{#******** BLOCK BODY *******#}
 {% block body %}
+    
     <!-- MODAL -->
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -138,6 +142,7 @@
     <link rel="stylesheet" href="{{ asset('css/barometer.css') }}"/>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' /> 
     
+    {#******** CSS BLOCK *******#}
     {% block stylesheets %}
         {{ parent() }}
 
@@ -147,21 +152,20 @@
             }
         </style>
     {% endblock %}
-
+    {#******** END CSS BLOCK *******#}
+    
+    {#******** BLOCK JAVASCRIPT *******#}
     {% block javascripts %}
         <script src="{{ asset('js/jquery.singular.js') }}" ></script>
         <script src="{{ asset('js/jquery.easing.js') }}" ></script>
         <script src="{{ asset('js/jquery.mousewheel.min.js') }}" ></script>
         <script src="{{ asset('js/barometer.js') }}" ></script>
-
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
-
-        <script type="text/javascript">
-            {{ include('@NetemediaBlocks/test.js.twig') }}
-        </script>
-
+        {{ include('@NetemediaBlocks/test.js.twig') }}
+        
     {% endblock %}    
+    {#******** END BLOCK JAVASCRIPT *******#}
     
 {% endblock %}
-
+{#******** END BLOCK BODY *******#}
 
