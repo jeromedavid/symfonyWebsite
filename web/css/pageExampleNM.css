@@ -82,10 +82,13 @@ p.subTitle {
     background-size: cover; 
     background-repeat: no-repeat;
     height:500px;
+    background-position: right;
+    padding:0;
+    margin:0;
 }
 
 #mainTitlePosition {
-    padding-top:200px;
+    padding-top:120px;
 }
 
 .redBand {
@@ -110,4 +113,57 @@ h2.introduction_title_h2 {
     font-weight: 500;
 }
 
-#cssmenufront { z-index:999999999 }
+@media (max-width: 750px) { 
+
+    .picto {
+        height:80px;
+    }
+
+    .picto img {
+        width:auto;
+        max-width:55px;
+        height: 55px;
+    }
+
+    div.center p.text {
+        font-size : 12px;
+    }
+
+    h1.titre {
+        font-size : 50px;
+    }
+
+    h1.introduction_title_h1 {
+        font-size : 28px;
+    }
+
+    h2.introduction_title_h2 {
+        font-size : 14px;
+    }            
+    .subTitle {
+        font-size : 16px;
+    }
+
+    p.subTitle {
+        font-size : 12px;
+    }
+
+    p.text {
+        font-size : 12px;
+    }
+
+    .BGHead {
+        height:250px;
+    }
+
+    #mainTitlePosition {
+        padding-top:25px;
+        padding-left:0;
+    }
+
+    .redBand {
+        width:250px;
+        height:3px;
+
+    }
+}

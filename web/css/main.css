@@ -122,3 +122,5 @@ small {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:1.2em;
 }
+
+#cssmenufront { z-index:999999999 }

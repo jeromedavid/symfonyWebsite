@@ -1,9 +1,10 @@
 <script type="text/javascript">
-    
+var singular;
+
 $(document).ready(function() {
 
     function singularPage() {
-        $('.js-singular').singular({
+        singular = $('.js-singular').singular({
             section: '.mod-singular-section',
             nav: '.js-singular-nav',
             prev: '.js-singular-prev',
@@ -20,8 +21,16 @@ $(document).ready(function() {
 
     singularPage();
 
+    $( window ).on('resize',function() {
+      //var secHref = $('li.mod-nav-item.js-singular-active a').attr("href");
+      //alert('reload');
+      var redirectTo = window.location.pathname;
+      //alert('reload');
+      window.location.href=redirectTo;
+    });
+
     // fix position plugin singular with top menu
-    $(".mod-singular").css("top", "-32px");
+    //$(".mod-singular").css("top", "32px");
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiamVyb21lZGF2aWQiLCJhIjoiY2p1bnI0eXJ0MmxpYTRlcGdpaXEwejJiaCJ9.r5Mh1UHfZAV-6Hud6u4tPQ';
     
@@ -46,9 +55,14 @@ $(document).ready(function() {
     });
 
     // correction (sauvage) bug d'affichage du plugin
-    $('.barometer_container:nth-child(2)').destroy();
-    $('#barometer_form:nth-child(2)').destroy();
+    $('#barometer .barometer_container:nth-child(1)').remove();
+    $('#barometer form:nth-child(1)').hide();
+
+
 
 });
+
+
+
 
 </script>

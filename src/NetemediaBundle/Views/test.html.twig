@@ -41,7 +41,11 @@
 
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h2 class='subtitle-font'>Singular</h2><i class="fas fa-link"></i> <a target="_blank" href="https://www.jqueryscript.net/layout/Create-A-Single-Page-Scrolling-Website-with-jQuery-CSS3-singular-js.html" >Lien</a>
+                            <h2 class='subtitle-font'>Singular</h2>
+                            <span class="subtitle-font-span">
+                                <i class="fas fa-link"></i>
+                                <a target="_blank" href="https://www.jqueryscript.net/layout/Create-A-Single-Page-Scrolling-Website-with-jQuery-CSS3-singular-js.html" >Lien</a>
+                            </span>
                             <p class="justify text-font">
                                 <br />
                                 Le plugin <strong>singular</strong> est utilisé pour diviser une seule page Web 
@@ -145,13 +149,42 @@
     {#******** CSS BLOCK *******#}
     {% block stylesheets %}
         {{ parent() }}
-
+        
         <style>
+            
+            .subtitle-font-span {
+                font-size : 14px;
+            }
+            
             #map {
                 width:750px; height:550px; margin:0 auto;
             }
             /* Hide scrollbar */
             html { overflow: hidden; }
+            
+            @media (max-width: 750px) { 
+            
+                .title-font {
+                    font-size : 20px;
+                }
+                
+                .subtitle-font {
+                    font-size : 16px;
+                }
+                
+                .subtitle-font-span {
+                    font-size : 10px;
+                }
+                
+                .text-font {
+                    font-size : 14px;
+                }
+            
+                
+                #map {
+                    width:100%; max-width:750px; height:550px; margin:0 auto;
+                }
+            }
         </style>
     {% endblock %}
     {#******** END CSS BLOCK *******#}
